@@ -7,7 +7,7 @@ This project is still under development.
 Upcoming support: 
 
 * .NET binary deobfuscation. 
-* Converted interface from windows forms to WPF. 
+* Graphical user interface will be converted from windows forms to WPF. 
 * Full IL and hexediting support.
 * Create customized binary patches.
 * ASM disassembler for binary files when origin is not .NET. 
