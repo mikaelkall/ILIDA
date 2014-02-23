@@ -32,20 +32,22 @@
             this.treeview_Definitions = new System.Windows.Forms.TreeView();
             this.tabControl_DefinitionWindow = new System.Windows.Forms.TabControl();
             this.tabPage_CodeView = new System.Windows.Forms.TabPage();
+            this.richTextBox_codeView = new System.Windows.Forms.RichTextBox();
             this.tabPage_IlCode = new System.Windows.Forms.TabPage();
+            this.richTextBox_Il_CodeView = new System.Windows.Forms.RichTextBox();
+            this.tabPage_hexeditor = new System.Windows.Forms.TabPage();
+            this.m_edtHex = new HexEdit.HexEditBox();
+            this.tabPage_DeObfuscator = new System.Windows.Forms.TabPage();
             this.richTextBox_AssemblyInfo = new System.Windows.Forms.RichTextBox();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripButton_OpenFile = new System.Windows.Forms.ToolStripButton();
-            this.tabPage_hexeditor = new System.Windows.Forms.TabPage();
-            this.tabPage_DeObfuscator = new System.Windows.Forms.TabPage();
-            this.richTextBox_codeView = new System.Windows.Forms.RichTextBox();
-            this.richTextBox_Il_CodeView = new System.Windows.Forms.RichTextBox();
             this.richTextBox_HexEditView = new System.Windows.Forms.RichTextBox();
+            this.richTextBox_HexEditAsciiWindow = new System.Windows.Forms.RichTextBox();
             this.tabControl_DefinitionWindow.SuspendLayout();
             this.tabPage_CodeView.SuspendLayout();
             this.tabPage_IlCode.SuspendLayout();
-            this.toolStrip1.SuspendLayout();
             this.tabPage_hexeditor.SuspendLayout();
+            this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // treeview_Definitions
@@ -79,6 +81,14 @@
             this.tabPage_CodeView.Text = ".NET Code";
             this.tabPage_CodeView.UseVisualStyleBackColor = true;
             // 
+            // richTextBox_codeView
+            // 
+            this.richTextBox_codeView.Location = new System.Drawing.Point(4, 7);
+            this.richTextBox_codeView.Name = "richTextBox_codeView";
+            this.richTextBox_codeView.Size = new System.Drawing.Size(847, 585);
+            this.richTextBox_codeView.TabIndex = 0;
+            this.richTextBox_codeView.Text = "";
+            // 
             // tabPage_IlCode
             // 
             this.tabPage_IlCode.Controls.Add(this.richTextBox_Il_CodeView);
@@ -89,6 +99,44 @@
             this.tabPage_IlCode.TabIndex = 1;
             this.tabPage_IlCode.Text = "IL Code";
             this.tabPage_IlCode.UseVisualStyleBackColor = true;
+            // 
+            // richTextBox_Il_CodeView
+            // 
+            this.richTextBox_Il_CodeView.Location = new System.Drawing.Point(6, 3);
+            this.richTextBox_Il_CodeView.Name = "richTextBox_Il_CodeView";
+            this.richTextBox_Il_CodeView.Size = new System.Drawing.Size(852, 599);
+            this.richTextBox_Il_CodeView.TabIndex = 0;
+            this.richTextBox_Il_CodeView.Text = "";
+            // 
+            // tabPage_hexeditor
+            // 
+            this.tabPage_hexeditor.Controls.Add(this.richTextBox_HexEditAsciiWindow);
+            this.tabPage_hexeditor.Controls.Add(this.m_edtHex);
+            this.tabPage_hexeditor.Location = new System.Drawing.Point(4, 22);
+            this.tabPage_hexeditor.Name = "tabPage_hexeditor";
+            this.tabPage_hexeditor.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage_hexeditor.Size = new System.Drawing.Size(854, 598);
+            this.tabPage_hexeditor.TabIndex = 2;
+            this.tabPage_hexeditor.Text = "HexEditor";
+            this.tabPage_hexeditor.UseVisualStyleBackColor = true;
+            // 
+            // m_edtHex
+            // 
+            this.m_edtHex.Location = new System.Drawing.Point(0, 0);
+            this.m_edtHex.Name = "m_edtHex";
+            this.m_edtHex.Size = new System.Drawing.Size(246, 598);
+            this.m_edtHex.TabIndex = 0;
+            this.m_edtHex.Text = "";
+            // 
+            // tabPage_DeObfuscator
+            // 
+            this.tabPage_DeObfuscator.Location = new System.Drawing.Point(4, 22);
+            this.tabPage_DeObfuscator.Name = "tabPage_DeObfuscator";
+            this.tabPage_DeObfuscator.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage_DeObfuscator.Size = new System.Drawing.Size(854, 598);
+            this.tabPage_DeObfuscator.TabIndex = 3;
+            this.tabPage_DeObfuscator.Text = "Deobfuscator";
+            this.tabPage_DeObfuscator.UseVisualStyleBackColor = true;
             // 
             // richTextBox_AssemblyInfo
             // 
@@ -121,43 +169,6 @@
             this.toolStripButton_OpenFile.Text = "Open File";
             this.toolStripButton_OpenFile.Click += new System.EventHandler(this.toolStripButton_OpenFile_Click);
             // 
-            // tabPage_hexeditor
-            // 
-            this.tabPage_hexeditor.Controls.Add(this.richTextBox_HexEditView);
-            this.tabPage_hexeditor.Location = new System.Drawing.Point(4, 22);
-            this.tabPage_hexeditor.Name = "tabPage_hexeditor";
-            this.tabPage_hexeditor.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage_hexeditor.Size = new System.Drawing.Size(854, 598);
-            this.tabPage_hexeditor.TabIndex = 2;
-            this.tabPage_hexeditor.Text = "HexEditor";
-            this.tabPage_hexeditor.UseVisualStyleBackColor = true;
-            // 
-            // tabPage_DeObfuscator
-            // 
-            this.tabPage_DeObfuscator.Location = new System.Drawing.Point(4, 22);
-            this.tabPage_DeObfuscator.Name = "tabPage_DeObfuscator";
-            this.tabPage_DeObfuscator.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage_DeObfuscator.Size = new System.Drawing.Size(854, 598);
-            this.tabPage_DeObfuscator.TabIndex = 3;
-            this.tabPage_DeObfuscator.Text = "Deobfuscator";
-            this.tabPage_DeObfuscator.UseVisualStyleBackColor = true;
-            // 
-            // richTextBox_codeView
-            // 
-            this.richTextBox_codeView.Location = new System.Drawing.Point(4, 7);
-            this.richTextBox_codeView.Name = "richTextBox_codeView";
-            this.richTextBox_codeView.Size = new System.Drawing.Size(847, 585);
-            this.richTextBox_codeView.TabIndex = 0;
-            this.richTextBox_codeView.Text = "";
-            // 
-            // richTextBox_Il_CodeView
-            // 
-            this.richTextBox_Il_CodeView.Location = new System.Drawing.Point(6, 3);
-            this.richTextBox_Il_CodeView.Name = "richTextBox_Il_CodeView";
-            this.richTextBox_Il_CodeView.Size = new System.Drawing.Size(852, 599);
-            this.richTextBox_Il_CodeView.TabIndex = 0;
-            this.richTextBox_Il_CodeView.Text = "";
-            // 
             // richTextBox_HexEditView
             // 
             this.richTextBox_HexEditView.Location = new System.Drawing.Point(4, 7);
@@ -165,6 +176,14 @@
             this.richTextBox_HexEditView.Size = new System.Drawing.Size(844, 595);
             this.richTextBox_HexEditView.TabIndex = 0;
             this.richTextBox_HexEditView.Text = "";
+            // 
+            // richTextBox_HexEditAsciiWindow
+            // 
+            this.richTextBox_HexEditAsciiWindow.Location = new System.Drawing.Point(252, 0);
+            this.richTextBox_HexEditAsciiWindow.Name = "richTextBox_HexEditAsciiWindow";
+            this.richTextBox_HexEditAsciiWindow.Size = new System.Drawing.Size(606, 602);
+            this.richTextBox_HexEditAsciiWindow.TabIndex = 1;
+            this.richTextBox_HexEditAsciiWindow.Text = "";
             // 
             // Form_MainWindow
             // 
@@ -180,9 +199,9 @@
             this.tabControl_DefinitionWindow.ResumeLayout(false);
             this.tabPage_CodeView.ResumeLayout(false);
             this.tabPage_IlCode.ResumeLayout(false);
+            this.tabPage_hexeditor.ResumeLayout(false);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
-            this.tabPage_hexeditor.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -202,6 +221,7 @@
         private System.Windows.Forms.RichTextBox richTextBox_codeView;
         private System.Windows.Forms.RichTextBox richTextBox_Il_CodeView;
         private System.Windows.Forms.RichTextBox richTextBox_HexEditView;
+        private System.Windows.Forms.RichTextBox richTextBox_HexEditAsciiWindow;
     }
 }
 

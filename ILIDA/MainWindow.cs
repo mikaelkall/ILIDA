@@ -29,6 +29,10 @@ namespace ILIDA
         public Mono.Cecil.AssemblyDefinition LoadAssembly { get; set; }
         public bool status = false;
 
+        /* Hexedit window */
+        private HexEdit.HexEditBox m_edtHex;
+        //private HexEdit.LinkedBox m_edtASCII;
+
         public Form_MainWindow()
         {
             InitializeComponent();
@@ -47,7 +51,19 @@ namespace ILIDA
                 /* If hex tab is selected */
                 if (tabControl_DefinitionWindow.SelectedIndex == 2)
                 {
-                    MessageBox.Show("HexEditor tab");
+                    try
+                    {
+                        byte[] m_abyData = System.IO.File.ReadAllBytes(selectedFilename);
+                        m_edtHex.InitializeComponent();
+                        //m_edtASCII.InitializeComponent();
+                        //m_edtHex.LinkDisplay(m_edtASCII);
+                        m_edtHex.LoadData(m_abyData);
+                    }
+                    catch
+                    {
+                        return;
+                    }
+
                 }
             }
         }
