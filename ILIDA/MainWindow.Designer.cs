@@ -36,13 +36,13 @@
             this.tabPage_IlCode = new System.Windows.Forms.TabPage();
             this.richTextBox_Il_CodeView = new System.Windows.Forms.RichTextBox();
             this.tabPage_hexeditor = new System.Windows.Forms.TabPage();
-            this.m_edtHex = new HexEdit.HexEditBox();
+            this.richTextBox_HexEditAsciiWindow = new System.Windows.Forms.RichTextBox();
             this.tabPage_DeObfuscator = new System.Windows.Forms.TabPage();
             this.richTextBox_AssemblyInfo = new System.Windows.Forms.RichTextBox();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripButton_OpenFile = new System.Windows.Forms.ToolStripButton();
             this.richTextBox_HexEditView = new System.Windows.Forms.RichTextBox();
-            this.richTextBox_HexEditAsciiWindow = new System.Windows.Forms.RichTextBox();
+            this.m_edtHex = new HexEdit.HexEditBox();
             this.tabControl_DefinitionWindow.SuspendLayout();
             this.tabPage_CodeView.SuspendLayout();
             this.tabPage_IlCode.SuspendLayout();
@@ -52,6 +52,8 @@
             // 
             // treeview_Definitions
             // 
+            this.treeview_Definitions.BackColor = System.Drawing.Color.Black;
+            this.treeview_Definitions.ForeColor = System.Drawing.Color.White;
             this.treeview_Definitions.Location = new System.Drawing.Point(1, 129);
             this.treeview_Definitions.Name = "treeview_Definitions";
             this.treeview_Definitions.Size = new System.Drawing.Size(236, 624);
@@ -83,6 +85,8 @@
             // 
             // richTextBox_codeView
             // 
+            this.richTextBox_codeView.BackColor = System.Drawing.Color.Black;
+            this.richTextBox_codeView.ForeColor = System.Drawing.Color.Lime;
             this.richTextBox_codeView.Location = new System.Drawing.Point(4, 7);
             this.richTextBox_codeView.Name = "richTextBox_codeView";
             this.richTextBox_codeView.Size = new System.Drawing.Size(847, 585);
@@ -102,6 +106,8 @@
             // 
             // richTextBox_Il_CodeView
             // 
+            this.richTextBox_Il_CodeView.BackColor = System.Drawing.Color.Black;
+            this.richTextBox_Il_CodeView.ForeColor = System.Drawing.Color.Lime;
             this.richTextBox_Il_CodeView.Location = new System.Drawing.Point(6, 3);
             this.richTextBox_Il_CodeView.Name = "richTextBox_Il_CodeView";
             this.richTextBox_Il_CodeView.Size = new System.Drawing.Size(852, 599);
@@ -120,13 +126,15 @@
             this.tabPage_hexeditor.Text = "HexEditor";
             this.tabPage_hexeditor.UseVisualStyleBackColor = true;
             // 
-            // m_edtHex
+            // richTextBox_HexEditAsciiWindow
             // 
-            this.m_edtHex.Location = new System.Drawing.Point(0, 0);
-            this.m_edtHex.Name = "m_edtHex";
-            this.m_edtHex.Size = new System.Drawing.Size(246, 598);
-            this.m_edtHex.TabIndex = 0;
-            this.m_edtHex.Text = "";
+            this.richTextBox_HexEditAsciiWindow.BackColor = System.Drawing.Color.Black;
+            this.richTextBox_HexEditAsciiWindow.ForeColor = System.Drawing.Color.Lime;
+            this.richTextBox_HexEditAsciiWindow.Location = new System.Drawing.Point(252, 0);
+            this.richTextBox_HexEditAsciiWindow.Name = "richTextBox_HexEditAsciiWindow";
+            this.richTextBox_HexEditAsciiWindow.Size = new System.Drawing.Size(606, 602);
+            this.richTextBox_HexEditAsciiWindow.TabIndex = 1;
+            this.richTextBox_HexEditAsciiWindow.Text = "";
             // 
             // tabPage_DeObfuscator
             // 
@@ -140,7 +148,9 @@
             // 
             // richTextBox_AssemblyInfo
             // 
+            this.richTextBox_AssemblyInfo.BackColor = System.Drawing.Color.Black;
             this.richTextBox_AssemblyInfo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.richTextBox_AssemblyInfo.ForeColor = System.Drawing.Color.Lime;
             this.richTextBox_AssemblyInfo.Location = new System.Drawing.Point(1, 0);
             this.richTextBox_AssemblyInfo.Name = "richTextBox_AssemblyInfo";
             this.richTextBox_AssemblyInfo.Size = new System.Drawing.Size(1097, 123);
@@ -177,13 +187,15 @@
             this.richTextBox_HexEditView.TabIndex = 0;
             this.richTextBox_HexEditView.Text = "";
             // 
-            // richTextBox_HexEditAsciiWindow
+            // m_edtHex
             // 
-            this.richTextBox_HexEditAsciiWindow.Location = new System.Drawing.Point(252, 0);
-            this.richTextBox_HexEditAsciiWindow.Name = "richTextBox_HexEditAsciiWindow";
-            this.richTextBox_HexEditAsciiWindow.Size = new System.Drawing.Size(606, 602);
-            this.richTextBox_HexEditAsciiWindow.TabIndex = 1;
-            this.richTextBox_HexEditAsciiWindow.Text = "";
+            this.m_edtHex.BackColor = System.Drawing.Color.Black;
+            this.m_edtHex.ForeColor = System.Drawing.Color.Lime;
+            this.m_edtHex.Location = new System.Drawing.Point(0, 0);
+            this.m_edtHex.Name = "m_edtHex";
+            this.m_edtHex.Size = new System.Drawing.Size(246, 598);
+            this.m_edtHex.TabIndex = 0;
+            this.m_edtHex.Text = "";
             // 
             // Form_MainWindow
             // 
@@ -194,6 +206,7 @@
             this.Controls.Add(this.richTextBox_AssemblyInfo);
             this.Controls.Add(this.tabControl_DefinitionWindow);
             this.Controls.Add(this.treeview_Definitions);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Form_MainWindow";
             this.Text = "ILIDA";
             this.tabControl_DefinitionWindow.ResumeLayout(false);

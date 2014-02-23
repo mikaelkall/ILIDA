@@ -95,6 +95,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="images\Open-icon.png" />
     <Content Include="Readme\CUDA.NET.Readme.txt" />
     <Content Include="Readme\CUDAfy-License.txt" />
     <Content Include="Readme\example_source_code.cs.txt" />
